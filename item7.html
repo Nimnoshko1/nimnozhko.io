@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Футболка Elden Ring</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Основные стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .item p {
+            color: #666;
+        }
+
+        .item a {
+            text-decoration: none;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        a {
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Мобильная версия до 768px */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .item {
+                width: 90%;
+            }
+        }
+
+        /* Планшеты 769px до 1024px */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .item {
+                width: 45%;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+
+        /* Десктопы 1024px и более */
+        @media (min-width: 1024px) {
+            .item {
+                width: 30%;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Домашня</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="login.html">Логін</a></li>
+                <li><a href="registration.html">Реєстрація</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Футболка Elden Ring</h1>
+        <div class="item">
+            <img src="https://th.bing.com/th/id/OIP.4cLBCmxU--eRquYgeaVtfwHaHa?rs=1&pid=ImgDetMain" alt="Футболка Elden Ring">
+            <p>Ціна: 1000 грн</p>
+            <a href="https://prom.ua/ua/p2136562474-futbolka-elden-ring.html" target="_blank">
+                <button>Купити</button>
+            </a>
+        </div>
+        <a href="catalog.html">Назад до каталогу</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 Блог Нимножко Андрія</p>
+    </footer>
+</body>
+</html>

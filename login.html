@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логін</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Основные стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 100px); /* Adjust height for header and footer */
+            padding: 20px;
+        }
+
+        .login-container {
+            max-width: 400px;
+            width: 100%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .center-gif {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-form h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-form label {
+            margin-bottom: 5px;
+            color: #555;
+            text-align: left;
+        }
+
+        .login-form input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .login-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .login-form button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Мобильная версия до 768px */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .login-container {
+                padding: 15px;
+            }
+
+            .login-form {
+                width: 100%;
+            }
+        }
+
+        /* Планшеты 769px до 1024px */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .login-container {
+                width: 80%;
+            }
+        }
+
+        /* Десктопы 1024px и более */
+        @media (min-width: 1024px) {
+            .login-container {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Домашня</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="login.html">Логін</a></li>
+                <li><a href="registration.html">Реєстрація</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="login-container">
+            <img src="https://i.pinimg.com/originals/d9/e9/51/d9e95188c99d13dc45b06ef9346290c7.gif" class="center-gif" alt="Elden Ring GIF">
+            <div class="login-form">
+                <h1>Логін до вашого акаунта</h1>
+                <form>
+                    <label for="username">Логін:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Вхід</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Блог Німножко Андрій</p>
+    </footer>
+</body>
+</html>

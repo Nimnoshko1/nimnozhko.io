@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://media3.giphy.com/media/HOPbFRwLm7n85RQwLY/giphy-downsized.gif'); /* Фоновая гифка */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #e0d8c1; /* Светло-бежевый цвет текста */
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8); /* Темный полупрозрачный фон */
+            color: #e0d8c1; /* Светло-бежевый цвет текста */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end; /* Вирівнювання меню по правій стороні */
+        }
+
+        nav li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav a {
+            color: #e0d8c1; /* Светло-бежевый цвет ссылок */
+            text-decoration: none;
+            padding: 15px 20px;
+        }
+
+        nav a:hover {
+            background-color: #4b4a48; /* Темно-коричневый фон при наведении */
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px); /* Высота основного блока, чтобы заполнить экран */
+            position: relative;
+        }
+
+        .form-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Уменьшенный максимальный размер формы */
+            background: rgba(20, 20, 20, 0.9); /* Темный полупрозрачный фон для формы */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            overflow: hidden; /* Обрезка содержимого, выходящего за рамки */
+        }
+
+        .form-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://steamuserimages-a.akamaihd.net/ugc/1835796359243846866/1195EBBDB89A80A6CCF939EE8CF9FC5FA943929D/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true'); /* Гифка для фона */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1; /* Поместить гифку под форму */
+        }
+
+        form {
+            position: relative;
+            padding: 20px;
+            background: rgba(20, 20, 20, 0.7); /* Полупрозрачный темный фон для формы */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        form input, form select, form textarea {
+            background-color: #333; /* Темно-серый фон для полей ввода */
+            color: #e0d8c1; /* Светло-бежевый текст в полях ввода */
+            border: 1px solid #555; /* Тёмно-серый бордер */
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        form textarea {
+            height: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #6d6d6d; /* Темно-серый цвет кнопки */
+            color: #e0d8c1; /* Светло-бежевый цвет текста */
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #8d8d8d; /* Светло-серый при наведении */
+        }
+
+        fieldset {
+            border: 1px solid #555; /* Тёмно-серый бордер */
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        .gender-options label {
+            margin-right: 20px;
+        }
+
+        /* Мобильная версия до 768px */
+        @media (max-width: 768px) {
+            main {
+                height: auto;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Домашня</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="login.html">Логін</a></li>
+                <li><a href="registration.html">Реєстрація</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="form-wrapper">
+            <form>
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="username">Логін:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirm-password">Підтвердження паролю:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <fieldset class="gender-options">
+                    <legend>Гендер:</legend>
+                    <label><input type="radio" name="gender" value="male" required> Чоловік</label>
+                    <label><input type="radio" name="gender" value="female" required> Жінка</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Дата народження:</legend>
+                    <select name="day" required>
+                        <option value="">День</option>
+                        <!-- Дні -->
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <!-- Добавьте остальные дни -->
+                    </select>
+                    <select name="month" required>
+                        <option value="">Місяць</option>
+                        <!-- Місяці -->
+                        <option value="01">Січень</option>
+                        <option value="02">Лютий</option>
+                        <option value="03">Березень</option>
+                        <option value="04">Квітень</option>
+                        <!-- Добавьте остальные месяцы -->
+                    </select>
+                    <select name="year" required>
+                        <option value="">Рік</option>
+                        <!-- Роки -->
+                        <option value="2000">2000</option>
+                        <option value="1999">1999</option>
+                        <option value="1998">1998</option>
+                        <option value="1997">1997</option>
+                        <!-- Добавьте остальные года -->
+                    </select>
+                </fieldset>
+                <label for="bio">Про себе:</label>
+                <textarea id="bio" name="bio"></textarea>
+                <button type="submit">Зареєструватись</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Блог Олександра Іванова</p>
+    </footer>
+</body>
+</html>

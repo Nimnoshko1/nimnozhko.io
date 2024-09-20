@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://media3.giphy.com/media/HOPbFRwLm7n85RQwLY/giphy-downsized.gif');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #e0d8c1; /* Светло-бежевый цвет текста */
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8); /* Темный полупрозрачный фон */
+            color: #e0d8c1; /* Светло-бежевый цвет текста */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        header img {
+            height: 80px; /* Висота логотипа */
+            margin-top: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end; /* Вирівнювання меню по правій стороні */
+        }
+        nav li {
+            margin: 0 15px;
+            position: relative;
+        }
+        nav a {
+            color: #e0d8c1; /* Светло-бежевый цвет ссылок */
+            text-decoration: none;
+            padding: 15px 20px;
+        }
+        nav a:hover {
+            background-color: #4b4a48; /* Темно-коричневый фон при наведении */
+        }
+        main {
+            padding: 20px;
+            background-color: rgba(20, 20, 20, 0.9); /* Темный полупрозрачный фон */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        h1, h2 {
+            color: #e0d8c1; /* Светло-бежевый цвет заголовков */
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8); /* Темный полупрозрачный фон */
+            color: #e0d8c1; /* Светло-бежевый цвет текста */
+        }
+        button, .btn {
+            padding: 10px 20px;
+            background-color: #6d6d6d; /* Темно-серый цвет кнопки */
+            color: #e0d8c1; /* Светло-бежевый цвет текста */
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover, .btn:hover {
+            background-color: #8d8d8d; /* Светло-серый при наведении */
+        }
+        form {
+            padding: 20px;
+            background: rgba(20, 20, 20, 0.9); /* Темный полупрозрачный фон */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        form input, form select, form textarea {
+            background-color: #333; /* Темно-серый фон для полей ввода */
+            color: #e0d8c1; /* Светло-бежевый текст в полях ввода */
+            border: 1px solid #555; /* Тёмно-серый бордер */
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        form textarea {
+            height: 100px;
+        }
+        .article {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .article-block {
+            background-color: rgba(20, 20, 20, 0.9); /* Темный полупрозрачный фон для блоков */
+            border: 1px solid #555; /* Тёмно-серый бордер */
+            border-radius: 8px; /* Скругленные углы */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+        .article-block:hover {
+            transform: scale(1.02); /* Легкое увеличение блока при наведении */
+        }
+        .article-block img {
+            width: 100%;
+            height: auto;
+            max-height: 300px; /* Максимальная высота изображения */
+            object-fit: cover; /* Обрезка изображения по краям */
+            border-radius: 4px; /* Скругленные углы для изображения */
+        }
+        .article-block figcaption {
+            font-style: italic;
+            color: #666; /* Тёмно-серый цвет для описания изображения */
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Мобильная версия до 768px */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+
+            .article {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Планшеты 769px до 1024px */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .article {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        /* Десктопы 1024px и более */
+        @media (min-width: 1024px) {
+            .article {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Домашня</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="login.html">Логін</a></li>
+                <li><a href="registration.html">Реєстрація</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Останні новини про *Elden Ring*</h1>
+            <div class="article">
+                <article class="article-block">
+                    <h2>Новый контент в DLC</h2>
+                    <figure>
+                        <img src="https://games.24tv.ua/resources/photos/news/202406/2578300.jpg?v=1718709613000&w=1200&h=675" alt="Новый контент в DLC">
+                        <figcaption>Недавно была анонсирована новая волна контента для Elden Ring, включая новые локации, врагов и оружие.</figcaption>
+                    </figure>
+                    <p>В частности, ожидаются расширенные подземелья и уникальные боссы, которые предоставят игрокам новые вызовы.</p>
+                </article>
+                <article class="article-block">
+                    <h2>Обновления баланса</h2>
+                    <p>Разработчики выпустили патч, который внесет изменения в баланс игры. Эти изменения затронут некоторые классы и умения, чтобы улучшить общий игровой процесс и сделать игру более сбалансированной.</p>
+                </article>
+                <article class="article-block">
+                    <h2>Моддинг-сообщество</h2>
+                    <figure>
+                        <img src="https://i.ytimg.com/vi/ODsid0TwlBM/maxresdefault.jpg" alt="Моддинг-сообщество">
+                        <figcaption>Моддинг-сообщество активно работает над созданием новых модов для Elden Ring.</figcaption>
+                    </figure>
+                    <p>Некоторые из них добавляют новые квесты, улучшения графики и даже изменяют механики игры, что позволяет игрокам наслаждаться новыми аспектами игры.</p>
+                </article>
+                <article class="article-block">
+                    <h2>Секреты и Easter eggs</h2>
+                    <figure>
+                        <img src="https://i.ytimg.com/vi/EBeZfnhFiEo/maxresdefault.jpg" alt="Секреты и Easter eggs">
+                        <figcaption>Игроки обнаружили несколько скрытых секретов и отсылок в игре.</figcaption>
+                    </figure>
+                    <p>Один из последних Easter egg’ов связан с предыдущими играми FromSoftware, что радует фанатов серии.</p>
+                </article>
+                <article class="article-block">
+                    <h2>Сотрудничество с другими брендами</h2>
+                    <figure>
+                        <img src="https://ixbt.online/live/images/original/14/52/33/2022/12/19/0ceba83b02.png" alt="Сотрудничество с другими брендами">
+                    </figure>
+                    <p>Включает уникальные фигурки и коллекционные предметы.</p>
+                </article>
+				<article class="article-block">
+                    <h2>роботи группи 16-2</h2>
+                    <figure>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn2pxn0tW6VBIHGpyH2dvCYjMQew-qamGFjw&s" alt="Сотрудничество с другими брендами">
+                    </figure>
+                    <p>Німножко Карпенко Котвіцький Ваховський Самолейленко Бурдельний</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Німножко Андрій</p>
+    </footer>
+</body>
+</html>

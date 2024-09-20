@@ -1,0 +1,445 @@
+/* Загальні стилі */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://media3.giphy.com/media/HOPbFRwLm7n85RQwLY/giphy-downsized.gif');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #e0d8c1; /* Цвет текста */
+}
+
+/* Шапка сайту */
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Темный полупрозрачный фон для шапки */
+    color: #e0d8c1; /* Светло-бежевый текст */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+header img {
+    height: 80px; /* Висота логотипа */
+    margin-top: 10px;
+}
+
+/* Меню навігації */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; /* Вирівнювання меню по правій стороні */
+}
+
+nav li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav a {
+    color: #e0d8c1; /* Светло-бежевый текст для ссылок */
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #4b4a48; /* Темно-коричневый фон при наведении */
+}
+
+nav li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px;
+    background-color: #e0d8c1; /* Светло-бежевый вертикальный разделитель */
+}
+
+/* Основной контент */
+main {
+    padding: 20px;
+    background-color: rgba(20, 20, 20, 0.9); /* Темный полупрозрачный фон для основного контента */
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Стилі заголовків */
+h1, h2 {
+    color: #e0d8c1; /* Светло-бежевый цвет заголовков */
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 36px; /* Заголовок сторінки */
+}
+
+h2 {
+    font-size: 24px; /* Заголовки карток і статей */
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Темный полупрозрачный фон для футера */
+    color: #e0d8c1; /* Светло-бежевый текст */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Кнопки */
+button, .btn {
+    padding: 10px 20px;
+    background-color: #6d6d6d; /* Темно-серый цвет кнопки */
+    color: #e0d8c1; /* Светло-бежевый текст на кнопке */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #8d8d8d; /* Светло-серый при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкий эффект тени */
+}
+
+/* Стилі для форм */
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.9); /* Темный полупрозрачный фон для форми */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #e0d8c1; /* Светло-бежевый текст для меток */
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #444; /* Темно-серый бордер для полей ввода */
+    border-radius: 4px;
+    background-color: #333; /* Темно-серый фон для полей ввода */
+    color: #e0d8c1; /* Светло-бежевый текст в полях ввода */
+}
+
+form textarea {
+    height: 100px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6d6d6d; /* Темно-серый цвет кнопки */
+    color: #e0d8c1; /* Светло-бежевый текст на кнопке */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+    background-color: #8d8d8d; /* Светло-серый при наведении */
+}
+
+/* Стилі для карток */
+.card {
+    width: 400px;
+    height: 300px;
+    background-color: #2c2c2c; /* Темно-серый фон для карток */
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: #4b4a48; /* Темно-коричневый при наведении */
+}
+
+.card h2 {
+    font-size: 24px;
+    color: #e0d8c1; /* Светло-бежевый заголовок внутри картки */
+}
+
+.card p {
+    font-size: 18px;
+    color: #e0d8c1; /* Светло-бежевый текст внутри картки */
+}
+
+/* Стилі для блогу */
+.article {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.article-block {
+    width: 350px;
+    height: 400px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.article-block img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.article-block:hover img {
+    transform: scale(1.05); /* Легкое увеличение картинки при наведении */
+}
+
+/* Контактна форма */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444; /* Темно-серый бордер для полей ввода */
+    border-radius: 4px;
+    background-color: #333; /* Темно-серый фон для полей ввода */
+    color: #e0d8c1; /* Светло-бежевый текст в полях ввода */
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+/* Стилі для форми логіну */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    position: relative;
+    text-align: center;
+}
+
+.center-gif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* Ширина гифки */
+    height: auto;
+    opacity: 0.5; /* Полупрозрачность */
+    z-index: 0;
+}
+
+.login-form {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Максимальная ширина формы */
+    padding: 20px;
+    background-color: rgba(20, 20, 20, 0.9); /* Темный полупрозрачный фон для формы */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.login-form h1 {
+    font-size: 24px;
+    color: #e0d8c1; /* Светло-бежевый заголовок */
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #e0d8c1; /* Светло-бежевый текст для меток */
+}
+
+.login-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #444; /* Темно-серый бордер для полей ввода */
+    border-radius: 4px;
+    background-color: #333; /* Темно-серый фон для полей ввода */
+    color: #e0d8c1; /* Светло-бежевый текст в полях ввода */
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6d6d6d; /* Темно-серый цвет кнопки */
+    color: #e0d8c1; /* Светло-бежевый текст на кнопке */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #8d8d8d; /* Светло-серый при наведении */
+}
+/* Стилі для форми логіну */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    position: relative;
+    text-align: center;
+    background-image: url('https://i.pinimg.com/originals/d9/e9/51/d9e95188c99d13dc45b06ef9346290c7.gif'); /* Добавляем гифку */
+    background-size: cover; /* Покрываем всю область */
+    background-position: center; /* Центрируем гифку */
+}
+
+.login-form {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Максимальная ширина формы */
+    padding: 20px;
+    background-color: rgba(20, 20, 20, 0.9); /* Темный полупрозрачный фон для формы */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.login-form h1 {
+    font-size: 24px;
+    color: #e0d8c1; /* Светло-бежевый заголовок */
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #e0d8c1; /* Светло-бежевый текст для меток */
+}
+
+.login-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #444; /* Темно-серый бордер для полей ввода */
+    border-radius: 4px;
+    background-color: #333; /* Темно-серый фон для полей ввода */
+    color: #e0d8c1; /* Светло-бежевый текст в полях ввода */
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6d6d6d; /* Темно-серый цвет кнопки */
+    color: #e0d8c1; /* Светло-бежевый текст на кнопке */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #8d8d8d; /* Светло-серый при наведении */
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://media3.giphy.com/media/HOPbFRwLm7n85RQwLY/giphy-downsized.gif');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #e0d8c1; /* Светло-бежевый цвет текста */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Темный полупрозрачный фон */
+    color: #e0d8c1; /* Светло-бежевый цвет текста */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+nav a {
+    color: #e0d8c1; /* Светло-бежевый цвет ссылок */
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+nav a:hover {
+    background-color: #4b4a48; /* Темно-коричневый фон при наведении */
+}
+
+main {
+    padding: 20px;
+    background-color: rgba(20, 20, 20, 0.9); /* Темный полупрозрачный фон */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    color: #e0d8c1; /* Светло-бежевый цвет заголовков */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Темный полупрозрачный фон */
+    color: #e0d8c1; /* Светло-бежевый цвет текста */
+}
+
+button, .btn {
+    padding: 10px 20px;
+    background-color: #6d6d6d; /* Темно-серый цвет кнопки */
+    color: #e0d8c1; /* Светло-бежевый цвет текста */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #8d8d8d; /* Светло-серый при наведении */
+}
+
+form {
+    padding: 20px;
+    background: rgba(20, 20, 20, 0.9); /* Темный полупрозрачный фон */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+form input, form textarea {
+    background-color: #333; /* Темно-серый фон для полей ввода */
+    color: #e0d8c1; /* Светло-бежевый текст в полях ввода */
+}
+
+.card {
+    background-color: #2c2c2c; /* Темно-серый фон для карток */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    background-color: #4b4a48; /* Темно-коричневый при наведении */
+}
+
+.login-container {
+    background-image: url('https://i.pinimg.com/originals/d9/e9/51/d9e95188c99d13dc45b06ef9346290c7.gif'); /* Гифка в фоне */
+    background-size: cover;
+    background-position: center;
+}
+
+.login-form {
+    background-color: rgba(20, 20, 20, 0.9); /* Темный полупрозрачный фон */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог про Elden Ring</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Основные стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-color: #000;
+        }
+
+        header {
+            background-color: #000;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        article {
+            margin-bottom: 20px;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для статьи */
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Стили для мобильных устройств (до 768px) */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            article {
+                padding: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+            footer {
+                font-size: 14px;
+            }
+        }
+
+        /* Стили для планшетов (769px до 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            nav ul {
+                flex-direction: row;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            article {
+                padding: 15px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+            footer {
+                font-size: 16px;
+            }
+        }
+
+        /* Стили для десктопов (1024px и более) */
+        @media (min-width: 1024px) {
+            nav ul {
+                flex-direction: row;
+            }
+
+            nav ul li {
+                margin: 0 15px;
+            }
+
+            main {
+                padding: 30px;
+            }
+
+            article {
+                padding: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+
+            footer {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Домашня</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="login.html">Логін</a></li>
+                <li><a href="registration.html">Реєстрація</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>Огляд Elden Ring: Пориньте у світ темряви і таємниць</h2>
+            <img src="https://th.bing.com/th/id/OIG1.bF.jgPlrRmNGUdtaHw1x?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Elden Ring скріншот 1">
+            <p>Elden Ring — це епічна рольова гра від студії FromSoftware, яка вражає своїм відкритим світом і глибоким сюжетом. Гравці зможуть досліджувати величезні території, розгадувати таємниці і боротися з численними ворогами в цьому захоплюючому світі. Гра поєднує в собі інноваційний геймплей та фантастичні візуальні ефекти, що робить її однією з найцікавіших новинок у жанрі RPG.</p>
+            <footer>
+                <a href="https://www.instagram.com/andrey_ghest/?locale=ru" target="_blank">Instagram</a>
+                <a href="https://steamcommunity.com/profiles/76561199026474349/" target="_blank">Steam</a>
+            </footer>
+        </article>
+        <article>
+            <h2>10 Причин, чому варто грати в Elden Ring</h2>
+            <img src="https://th.bing.com/th/id/OIG1.naHwf0QPvrDZQ9R1DnId?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Причини грати в Elden Ring">
+            <p>Ось декілька вагомих причин, чому вам слід спробувати Elden Ring:</p>
+            <ul>
+                <li><strong>Неперевершений відкритий світ:</strong> Величезні території, які ви можете досліджувати на свій розсуд.</li>
+                <li><strong>Глибокий сюжет:</strong> Захоплююча історія, яка тримає в напрузі від початку до кінця.</li>
+                <li><strong>Інноваційний геймплей:</strong> Суміш класичних елементів RPG та нових механік, які роблять гру унікальною.</li>
+                <li><strong>Вражаючі боси:</strong> Виклики, які випробують ваші навички та стратегію.</li>
+            </ul>
+            <footer>
+                <a href="https://www.instagram.com/andrey_ghest/?locale=ru" target="_blank">Instagram</a>
+                <a href="https://steamcommunity.com/profiles/76561199026474349/" target="_blank">Steam</a>
+            </footer>
+        </article>
+        <article>
+            <h2>Розробники Elden Ring: Знайомтесь із творцями гри</h2>
+            <img src="https://th.bing.com/th/id/OIG3.gRXxnNdkdzsuTN4zmz81?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Розробники Elden Ring">
+            <p>FromSoftware — це студія, яка створила ряд культових ігор, таких як Dark Souls і Bloodborne. Elden Ring є результатом їхнього багатого досвіду та інноваційного підходу до розробки ігор. Співпраця з Джорджем Мартіном, автором "Пісні льоду і полум'я", надала грі унікальний сюжет і глибину, що ще більше підсилює її привабливість.</p>
+            <footer>
+                <a href="https://www.instagram.com/andrey_ghest/?locale=ru" target="_blank">Instagram</a>
+                <a href="https://steamcommunity.com/profiles/76561199026474349/" target="_blank">Steam</a>
+            </footer>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 Блог Нимножко Андрія</p>
+    </footer>
+</body>
+</html>

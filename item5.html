@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фігурка Elden Ring</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Основные стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .item {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .item p {
+            color: #666;
+        }
+
+        .item a {
+            text-decoration: none;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        a {
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Мобильная версия до 768px */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .item {
+                width: 90%;
+            }
+        }
+
+        /* Планшеты 769px до 1024px */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .item {
+                width: 45%;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+
+        /* Десктопы 1024px и более */
+        @media (min-width: 1024px) {
+            .item {
+                width: 30%;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Домашня</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="login.html">Логін</a></li>
+                <li><a href="registration.html">Реєстрація</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Фігурка Elden Ring</h1>
+        <div class="item">
+            <img src="https://ae01.alicdn.com/kf/Sd1145306de6a491f9aa91e02ec20de73f.jpg" alt="Фігурка Elden Ring">
+            <p>Ціна: 288,26 грн</p>
+            <a href="https://www.aliexpress.com/item/1005007075336615.html?spm=a2g0o.productlist.main.3.37b8Yj1mYj1muP&algo_pvid=646fabd0-8b7c-4848-b603-499484ac637a&algo_exp_id=646fabd0-8b7c-4848-b603-499484ac637a-1&pdp_npi=4%40dis%21UAH%21288.26%2189.33%21%21%2148.08%2114.90%21%40211b618e17267310896044869efa55%2112000039318326439%21sea%21UA%210%21ABX&curPageLogUid=nOXHMHmjZfbS&utparam-url=scene%3Asearch%7Cquery_from%3A" target="_blank">
+                <button>Купити</button>
+            </a>
+        </div>
+        <a href="catalog.html">Назад до каталогу</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 Блог Нимножко Андрія</p>
+    </footer>
+</body>
+</html>

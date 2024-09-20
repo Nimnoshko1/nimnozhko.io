@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Основные стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-color: #000;
+        }
+
+        header {
+            background-color: #000;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        address {
+            margin-bottom: 20px;
+        }
+
+        address p {
+            margin: 5px 0;
+        }
+
+        iframe {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Стили для мобильных устройств (до 768px) */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            iframe {
+                width: 100%;
+                height: 300px;
+            }
+        }
+
+        /* Стили для планшетов (769px до 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            nav ul {
+                flex-direction: row;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            iframe {
+                width: 100%;
+                height: 400px;
+            }
+        }
+
+        /* Стили для десктопов (1024px и более) */
+        @media (min-width: 1024px) {
+            nav ul {
+                flex-direction: row;
+            }
+
+            nav ul li {
+                margin: 0 15px;
+            }
+
+            iframe {
+                width: 100%;
+                height: 450px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="main.html">Домашня</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="login.html">Логін</a></li>
+                <li><a href="registration.html">Реєстрація</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <address>
+            <p>Телефон: +38 123 456 7890</p>
+            <p>Email: info@example.com</p>
+        </address>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253000.15484911507!2d-0.127647!3d51.507351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b4e0f097f3d%3A0x9b6379f7a2e27fc9!2sLondon%2C%20UK!5e0!3m2!1sen!2sua!4v1604460568922!5m2!1sen!2sua" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </main>
+    <footer>
+        <p>&copy; 2024 Блог Олександра Іванова</p>
+    </footer>
+</body>
+</html>
